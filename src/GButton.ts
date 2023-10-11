@@ -521,6 +521,12 @@ export class GButton extends GComponent {
         }
     }
 
+    public clearClick(): void {
+        this._node.off(FUIEvent.CLICK);
+        // 重新注册
+        this._node.on(FUIEvent.CLICK, this.onClick_1, this);
+    }
+
     private onClick_1(): void {
         if (this._sound) {
             var pi: PackageItem = UIPackage.getItemByURL(this._sound);

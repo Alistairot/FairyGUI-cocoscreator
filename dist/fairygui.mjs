@@ -13278,6 +13278,11 @@ class GButton extends GComponent {
             }
         }
     }
+    clearClick() {
+        this._node.off(Event.CLICK);
+        // 重新注册
+        this._node.on(Event.CLICK, this.onClick_1, this);
+    }
     onClick_1() {
         if (this._sound) {
             var pi = UIPackage.getItemByURL(this._sound);

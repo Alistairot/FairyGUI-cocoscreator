@@ -891,6 +891,7 @@ declare module 'fairygui-cc/GButton' {
         setProp(index: number, value: any): void;
         protected constructExtension(buffer: ByteBuffer): void;
         setup_afterAdd(buffer: ByteBuffer, beginPos: number): void;
+        clearClick(): void;
     }
 }
 

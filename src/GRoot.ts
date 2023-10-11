@@ -361,6 +361,7 @@ export class GRoot extends GComponent {
             this.audioEngine.clip = clip;
             this.audioEngine.volume = this._volumeScale * volumeScale
             this.audioEngine.loop = false;
+            this.audioEngine.playOnAwake = false;
             this.audioEngine.play();
         }
     }
